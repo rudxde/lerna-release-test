@@ -1,0 +1,14 @@
+{
+  "name": "@rudx-lenra-test/b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rudx-lenra-test/a": "1.0.0"
+  }
+}
