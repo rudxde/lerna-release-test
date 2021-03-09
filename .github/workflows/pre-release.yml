@@ -68,6 +68,6 @@ jobs:
           path: ./
       - run: npm ci
       - run: npm run bootstrap
-      - run: npm run publish
+      - run: npm run publish -- --tag build
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
