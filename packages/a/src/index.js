@@ -5,6 +5,6 @@ module.exports = function () {
         console.log('THIS IS MODULE A');
         loggedWelcome = true;
     }
-    console.log('Hello world from a.');
+    console.log('Hello World from a.');
     return 'a';
 }
