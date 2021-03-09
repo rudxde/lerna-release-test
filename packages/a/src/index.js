@@ -1,5 +1,10 @@
+let loggedWelcome = false;
+
 module.exports = function () {
-    console.log('THIS IS MODULE A')
+    if(!loggedWelcome) {
+        console.log('THIS IS MODULE A');
+        loggedWelcome = true;
+    }
     console.log('Hello world from a.');
     return 'a';
 }
