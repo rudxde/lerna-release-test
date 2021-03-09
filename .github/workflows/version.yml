@@ -40,8 +40,8 @@ jobs:
       - run: npm run test
       - name: cleanup node_modules
         run: |
-        npm run clean
-        rm -rf node_modules
+          npm run clean
+          rm -rf node_modules
       - uses: actions/upload-artifact@v1
         with:
           name: build
