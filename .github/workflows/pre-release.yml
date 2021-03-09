@@ -20,7 +20,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run bootstrap
-      - run: npm run version -- --no-git-tag-version --no-push --no-changelog --conventional-prerelease --preid build.$(git rev-parse --short HEAD)
+      - run: npm run version -- --no-git-tag-version --no-push --no-changelog --conventional-prerelease --force-publish --preid build.$(git rev-parse --short HEAD)
       - name: cleanup node_modules
         run: |
           npm run clean
