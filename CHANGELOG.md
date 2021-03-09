@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.4](https://github.com/rudxde/lerna-release-test/compare/v1.4.3...v1.4.4) (2021-03-09)
+
+
+### Bug Fixes
+
+* **a:** capital A ([97af521](https://github.com/rudxde/lerna-release-test/commit/97af5219bc21c48a608c611d076376ff1c398fa7))
+
+
+
+
+
 ## [1.4.3](https://github.com/rudxde/lerna-release-test/compare/v1.4.2...v1.4.3) (2021-03-09)
 
 
