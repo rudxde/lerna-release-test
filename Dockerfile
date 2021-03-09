@@ -1,8 +1,6 @@
 FROM node:14-alpine
 
-ARG SERVICE
-
-COPY packages/${SERVICE}/ .
+COPY ./ .
 RUN npm i
 RUN npm run build
 

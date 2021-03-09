@@ -53,10 +53,10 @@ async function main() {
                 break
         }
     }
-    const lernaJson = (await readFile("lerna.json")).toString();
+    const lernaJson = (await readFile("package.json")).toString();
     const version = JSON.parse(lernaJson).version;
     const buildTag = `${registry ? registry + '/' : ''}${organization}/${service}:${version}`;
-    await run("docker", ["build", "--build-arg", `SERVICE=${service}`, "-t", buildTag, "."]);
+    await run("docker", ["build", "-t", buildTag, "../.."]);
     await run("docker", ["push", buildTag]);
     if (tagLatest) {
         const latestTag = `${registry ? registry + '/' : ''}${organization}:latest`;

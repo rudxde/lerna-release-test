@@ -6,6 +6,7 @@
     "publish": "lerna exec -- npm publish --access public",
     "version": "lerna version --conventional-commits --yes",
     "build": "lerna run build",
+    "docker": "lerna run docker",
     "clean": " lerna clean --yes"
   },
   "devDependencies": {
