@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
- update-version:
+  update-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,3 +23,56 @@ jobs:
       - run: npm run version -- --create-release github
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  build:
+    needs: update-version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run bootstrap
+      - run: npm run build
+      - run: npm run test
+      - uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: ./
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - uses: actions/download-artifact@v1
+        with:
+          name: build
+          path: ./
+      - run: npm ci
+      - run: npm run bootstrap
+      - run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+      - uses: actions/download-artifact@v1
+        with:
+          name: build
+          path: ./
+      - run: npm ci
+      - run: npm run bootstrap
+      - run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
