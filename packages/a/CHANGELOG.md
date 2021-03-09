@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/rudxde/lerna-release-test/compare/v1.1.1...v1.2.0) (2021-03-09)
+
+
+### Features
+
+* **a:** add module announcement ([61ac76e](https://github.com/rudxde/lerna-release-test/commit/61ac76eeb6544193519c1c3daae7d99213c34ed5))
+
+
+
+
+
 # 1.1.0 (2021-03-09)
 
 
