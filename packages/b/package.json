@@ -2,9 +2,9 @@
   "name": "@rudx-lenra-test/b",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node builder.js"
   },
   "author": "",
   "license": "ISC",
