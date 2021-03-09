@@ -17,6 +17,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run bootstrap
+      - run: |
+         git config --global user.email "ci@example.com"
+         git config --global user.name "continuous integration"
       - run: npm run version -- --create-release github
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
