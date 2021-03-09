@@ -25,7 +25,7 @@ async function main() {
     let service;
     let tagLatest = false;
     let registry;
-    let organization = "rudx-lenra-test";
+    let organization = "rudxlenratest";
     for (let i = 1; i < process.argv.length; i++) {
         switch (process.argv[i]) {
             case '--service':
