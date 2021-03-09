@@ -4,8 +4,9 @@
   "scripts": {
     "bootstrap": "lerna run bootstrap",
     "publish": "lerna exec -- npm publish --access public",
-    "version": "npx lerna version --conventional-commits --yes",
-    "build": "npx lerna run build"
+    "version": "lerna version --conventional-commits --yes",
+    "build": "lerna run build",
+    "clean": " lerna clean --yes"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
