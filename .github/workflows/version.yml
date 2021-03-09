@@ -38,8 +38,10 @@ jobs:
       - run: npm run bootstrap
       - run: npm run build
       - run: npm run test
-      - run: npm run clean
-        name: cleanup node_modules
+      - name: cleanup node_modules
+        run: |
+        npm run clean
+        rm -rf node_modules
       - uses: actions/upload-artifact@v1
         with:
           name: build
