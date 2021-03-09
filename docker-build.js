@@ -53,6 +53,9 @@ async function main() {
                 break
         }
     }
+    if(service.length < 2) {
+        service = service + '-package'
+    }
     const lernaJson = (await readFile("package.json")).toString();
     const version = JSON.parse(lernaJson).version;
     const buildTag = `${registry ? registry + '/' : ''}${organization}/${service}:${version}`;
