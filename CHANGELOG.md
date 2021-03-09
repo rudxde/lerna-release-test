@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/rudxde/lerna-release-test/compare/v1.4.1...v1.4.2) (2021-03-09)
+
+
+### Bug Fixes
+
+* -t -> -f ([b860370](https://github.com/rudxde/lerna-release-test/commit/b860370c5dea7a0cf4265fb3b375cc737bddf08f))
+* ci dockerfile path ([6d384e6](https://github.com/rudxde/lerna-release-test/commit/6d384e6877b3fee82c1ab719e66f8090cb3af9ac))
+* rudxlenratest ([394992e](https://github.com/rudxde/lerna-release-test/commit/394992e2ae92359ad98f0ef808ed4b691f46e928))
+
+
+### Features
+
+* longer docker image names ([213afc0](https://github.com/rudxde/lerna-release-test/commit/213afc0d8aa9817b1533130df0b1fbbcb0f794dd))
+
+
+
+
+
 ## [1.4.1](https://github.com/rudxde/lerna-release-test/compare/v1.4.0...v1.4.1) (2021-03-09)
 
 
