@@ -25,15 +25,26 @@ jobs:
       - run: npm run version -- --create-release github
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: cleanup node_modules
+        run: |
+          npm run clean
+          rm -rf node_modules
+      - uses: actions/upload-artifact@v1
+        with:
+          name: update-version
+          path: ./
 
   build:
     needs: update-version
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      - uses: actions/download-artifact@v1
+        with:
+          name: update-version
+          path: ./
       - run: npm ci
       - run: npm run bootstrap
       - run: npm run build
