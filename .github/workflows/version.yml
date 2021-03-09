@@ -7,20 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm test
-
-  publish-npm:
-    needs: build
+ update-version:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -32,4 +19,4 @@ jobs:
       - run: npm run bootstrap
       - run: npm run version -- --create-release github
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
