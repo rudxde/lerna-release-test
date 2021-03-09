@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/rudxde/lerna-release-test/compare/v1.1.0...v1.1.1) (2021-03-09)
+
+
+### Bug Fixes
+
+* **b:** fix spelling ([e13075d](https://github.com/rudxde/lerna-release-test/commit/e13075dffe2a7014b93edb4b723c50c2958771ad))
+
+
+
+
+
 # 1.1.0 (2021-03-09)
 
 
