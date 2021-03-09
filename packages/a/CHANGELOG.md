@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/rudxde/lerna-release-test/compare/v1.3.2...v1.4.0) (2021-03-09)
+
+
+### Features
+
+* **a:** log welcome jut once ([c4d76fb](https://github.com/rudxde/lerna-release-test/commit/c4d76fb7c7b974f9eab31adfda530798cbd782d7))
+
+
+
+
+
 ## 1.3.2 (2021-03-09)
 
 **Note:** Version bump only for package @rudx-lenra-test/a
