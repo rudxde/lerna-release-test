@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.6](https://github.com/rudxde/lerna-release-test/compare/v1.4.5...v1.4.6) (2021-03-10)
+
+
+### Bug Fixes
+
+* add missing :latest script ([6c21d7c](https://github.com/rudxde/lerna-release-test/commit/6c21d7cb76c22df50d1edf371d99b2ef9fb295d9))
+
+
+
+
+
 ## [1.4.5](https://github.com/rudxde/lerna-release-test/compare/v1.4.4...v1.4.5) (2021-03-10)
 
 **Note:** Version bump only for package root

@@ -1,6 +1,6 @@
 {
   "name": "@rudx-lenra-test/b",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "",
   "main": "dist/index.js",
   "files": [
@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@rudx-lenra-test/a": "^1.4.5"
+    "@rudx-lenra-test/a": "^1.4.6"
   }
 }
