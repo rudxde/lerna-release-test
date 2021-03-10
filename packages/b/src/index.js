@@ -9,5 +9,5 @@ module.exports = function() {
         loggedWelcome = true;
     }
     console.log('Hello B.');
-    return 'b';
+    return;
 }
