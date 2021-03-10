@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/rudxde/lerna-release-test/compare/v2.0.1...v2.1.0) (2021-03-10)
+
+
+### Features
+
+* **c:** use capital H ([5ef6943](https://github.com/rudxde/lerna-release-test/commit/5ef69438db4c2f9b3474bddd39d051929a02b571))
+
+
+
+
+
 ## [2.0.1](https://github.com/rudxde/lerna-release-test/compare/v2.0.0...v2.0.1) (2021-03-10)
 
 **Note:** Version bump only for package @rudx-lenra-test/c
