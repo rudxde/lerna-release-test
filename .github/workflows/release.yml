@@ -72,7 +72,7 @@ jobs:
           path: ./
       - run: npm ci
       - run: npm run bootstrap
-      - run: npm run publish:since
+      - run: npm run publish:since -- --tag latest
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
