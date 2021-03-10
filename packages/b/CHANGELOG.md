@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/rudxde/lerna-release-test/compare/v2.0.0...v2.0.1) (2021-03-10)
+
+
+### Bug Fixes
+
+* **b:** remove one exclamation mark ([049367d](https://github.com/rudxde/lerna-release-test/commit/049367d55e2a2510c520628d9dfdd7e36c44a4f2))
+
+
+
+
+
 # [2.0.0](https://github.com/rudxde/lerna-release-test/compare/v1.6.0...v2.0.0) (2021-03-10)
 
 
