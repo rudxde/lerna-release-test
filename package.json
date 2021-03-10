@@ -4,11 +4,11 @@
   "scripts": {
     "bootstrap": "lerna run bootstrap",
     "publish": "lerna exec -- npm publish --access public",
-    "publish:since": "lerna exec --since $(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1)) -- npm publish --access public",
+    "publish:since": "lerna exec --since $(git rev-parse HEAD^) -- npm publish --access public",
     "version": "lerna version --conventional-commits --yes",
     "build": "lerna run build",
     "docker": "lerna run docker",
-    "docker:latest": "lerna run docker:latest --since $(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))",
+    "docker:latest": "lerna run docker:latest --since $(git rev-parse HEAD^)",
     "clean": " lerna clean --yes"
   },
   "devDependencies": {
