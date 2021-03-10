@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/rudxde/lerna-release-test/compare/v1.6.0...v2.0.0) (2021-03-10)
+
+
+### Features
+
+* **b:** return void ([ab7d2b6](https://github.com/rudxde/lerna-release-test/commit/ab7d2b638a93c4294078eb5fe07d70ee0a86085b))
+
+
+### BREAKING CHANGES
+
+* **b:** no return
+
+
+
+
+
 # [1.6.0](https://github.com/rudxde/lerna-release-test/compare/v1.5.2...v1.6.0) (2021-03-10)
 
 
