@@ -72,7 +72,7 @@ jobs:
           path: ./
       - run: npm ci
       - run: npm run bootstrap
-      - run: npm run publish -- --since
+      - run: npm run publish -- -- --since $(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
@@ -90,4 +90,4 @@ jobs:
           path: ./
       - run: npm ci
       - run: docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_TOKEN}}
-      - run: npm run docker:latest -- --since
+      - run: npm run docker:latest -- --since $(git describe --abbrev=0 --tags $(git rev-list --tags --skip=1 --max-count=1))
