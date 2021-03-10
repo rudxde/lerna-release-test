@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/rudxde/lerna-release-test/compare/v1.5.2...v1.6.0) (2021-03-10)
+
+
+### Bug Fixes
+
+* correct tag name for docker push ([43ac0e6](https://github.com/rudxde/lerna-release-test/commit/43ac0e644ad07f6d40ff24f3c15f2fd82bde7d34))
+
+
+### Features
+
+* **b:** add more ! ([78bda8a](https://github.com/rudxde/lerna-release-test/commit/78bda8a8b16f8f2ed69701b51281c6f845668687))
+
+
+
+
+
 ## [1.5.2](https://github.com/rudxde/lerna-release-test/compare/v1.5.1...v1.5.2) (2021-03-10)
 
 
