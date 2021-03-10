@@ -34,7 +34,7 @@ async function main() {
             case '--organization':
                 organization = process.argv[++i];
                 break
-            case '--tagLatest':
+            case '--latest':
                 tagLatest = true;
                 break
             case '--registry':
@@ -45,7 +45,7 @@ async function main() {
                     `options:\n` +
                     '\t--service <name> [required] Name of the service to build the image for\n' +
                     '\t--organization <name> Name of the organization fot the image\n' +
-                    '\t--tagLatest should the image also be tagged as latest\n' +
+                    '\t--latest should the image also be tagged as latest\n' +
                     '\t--registry <url> optional docker registry\n' +
                     '\t--help show help\n'
                 );
@@ -53,7 +53,7 @@ async function main() {
                 break
         }
     }
-    if(service.length < 2) {
+    if (service.length < 2) {
         service = service + '-package'
     }
     const lernaJson = (await readFile("package.json")).toString();
@@ -63,9 +63,19 @@ async function main() {
     await run("docker", ["push", buildTag]);
     if (tagLatest) {
         const latestTag = `${registry ? registry + '/' : ''}${organization}:latest`;
-        await run("docker", ["tag", buildTag, latestTag]);
-        await run("docker", ["push", latestTag]);
+        await tagAndPush(buildTag, latestTag);
+        if (version.match(/^[0-9]+\.[0-9]+\.[0-9]$/gm)) {
+            const [major, minor, patch] = version.split('.');
+            await tagAndPush(buildTag, `${major}.${minor}`);
+            await tagAndPush(buildTag, `${major}`);
+        }
     }
+}
+
+async function tagAndPush(baseTag, pushAs) {
+    console.log(`push tag ${baseTag} as tag ${pushAs}.`)
+    await run("docker", ["tag", baseTag, pushAs]);
+    await run("docker", ["push", pushAs]);
 }
 
 main().catch(err => {
