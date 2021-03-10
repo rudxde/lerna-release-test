@@ -8,6 +8,6 @@ module.exports = function() {
         console.log('THIS IS MODULE Bee!!!');
         loggedWelcome = true;
     }
-    console.log('Hello B.');
+    console.log('Hello Bee.');
     return;
 }
